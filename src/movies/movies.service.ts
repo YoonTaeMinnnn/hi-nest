@@ -34,6 +34,6 @@ export class MoviesService {
     update(id:number, updateData){
         const movie = this.getOne(id);
         this.deleteOne(id);
-        this.movies.push({...movie, ...updateData});
+        this.movies.push({...movie, ...updateData}); //붙혀넣기
     }
 }
