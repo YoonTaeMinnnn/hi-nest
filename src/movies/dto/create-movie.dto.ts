@@ -1,13 +1,12 @@
-import { IsNumber, IsString } from "class-validator";
+import { IsNumber, IsString } from 'class-validator';
 
-export class CreateMovieDto{
+export class CreateMovieDto {
+  @IsString()
+  readonly title: string;
 
-    @IsString()
-    readonly title: string;
+  @IsNumber()
+  readonly year: number;
 
-    @IsNumber()
-    readonly year: number;
-
-    @IsString({each:true})
-    readonly genres: string[];
+  @IsString({ each: true })
+  readonly genres: string[];
 }
